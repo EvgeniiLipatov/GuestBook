@@ -17,7 +17,7 @@ def create_record_view(request, *args, **kwargs):
     elif request.method == 'POST':
         form = BookForm(data=request.POST)
         if form.is_valid():
-            task = Book.objects.create(
+            Book.objects.create(
                 author=form.cleaned_data['author'],
                 email=form.cleaned_data['email'],
                 text=form.cleaned_data['text'],
@@ -26,3 +26,27 @@ def create_record_view(request, *args, **kwargs):
             return redirect('index')
         else:
             return render(request, 'create.html', context={'form': form})
+
+
+def update_record_view(request, pk):
+    record = get_object_or_404(Book, pk=pk)
+    if request.method == 'GET':
+        form = BookForm(data={
+            'author': record.author,
+            'email': record.email,
+            'text': record.text
+        })
+        return render(request, 'update.html', context={
+            'form': form,
+            'record': record
+        })
+    elif request.method == 'POST':
+        form = BookForm(data=request.POST)
+        if form.is_valid():
+            record.author = form.cleaned_data['author']
+            record.email = form.cleaned_data['email']
+            record.text = form.cleaned_data['text']
+            record.save()
+            return redirect('index')
+        else:
+            return render(request, 'update.html', context={'form': form})

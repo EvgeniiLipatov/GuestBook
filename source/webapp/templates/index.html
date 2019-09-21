@@ -7,11 +7,11 @@
   <div class="card-body">
     <h5 class="card-title">{{ record.author }} ({{ record.email  }})</h5>
     <p class="card-text">{{ record.text }}</p>
-    <a href="#" class="card-link">Edit</a>
+    <a href="{% url 'update_record' record.pk %}" class="card-link">Edit</a>
     <a href="#" class="card-link">Delete</a>
   </div>
 </div>
 {% endfor %}
-<a href="create/">Create New</a>
+<a href="{% url 'create_record' %}">Create New</a>
 {% endblock %}
 
