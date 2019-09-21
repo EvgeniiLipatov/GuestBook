@@ -50,3 +50,14 @@ def update_record_view(request, pk):
             return redirect('index')
         else:
             return render(request, 'update.html', context={'form': form})
+
+
+def delete_record_view(request, pk):
+    record = get_object_or_404(Book, pk=pk)
+    if request.method == 'GET':
+        return render(request, 'delete.html', context={
+            'record': record
+        })
+    elif request.method == 'POST':
+        record.delete()
+        return redirect('index')
