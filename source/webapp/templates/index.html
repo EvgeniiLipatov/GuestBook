@@ -1,17 +1,28 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
 
+<h2 class="text-center" > Добро пожаловать в гостевую книгу</h2>
+
+<p class="text-center mt-5">
+   <a href="{% url 'create_record' %}" class="btn btn-primary" >добавить новую запись</a>
+</p>
+
+
 {% for record in records %}
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">{{ record.author }} ({{ record.email  }})</h5>
-    <p class="card-text">{{ record.text }}</p>
-    <a href="{% url 'update_record' record.pk %}" class="card-link">Edit</a>
-    <a href="{% url 'delete_record' record.pk %}" class="card-link">Delete</a>
-  </div>
+
+<div class="row justify-content-center">
+    <div class="card mt-3" style="width: 75%;">
+      <div class="card-body">
+        <h5 class="card-title">{{ record.author }} ({{ record.email  }})</h5>
+        <p class="card-text">{{ record.text }}</p>
+        <a href="{% url 'update_record' record.pk %}" class="card-link btn btn-outline-primary">Редактировать</a>
+        <a href="{% url 'delete_record' record.pk %}" class="card-link btn btn-outline-primary">Удалить</a>
+      </div>
+    </div>
 </div>
 {% endfor %}
-<a href="{% url 'create_record' %}">Create New</a>
+
 {% endblock %}
 

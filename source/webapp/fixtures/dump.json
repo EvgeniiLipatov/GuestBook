@@ -1,0 +1,80 @@
+[
+{
+  "model": "webapp.book",
+  "pk": 1,
+  "fields": {
+    "author": "Evgenii",
+    "email": "evgenii@gmail.com",
+    "text": "My first record. \r\nAdd some changed",
+    "CreatedDate": "2019-09-21T06:55:09.342Z",
+    "LastEditDate": "2019-09-21T10:20:08.479Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.book",
+  "pk": 2,
+  "fields": {
+    "author": "Ernest",
+    "email": "ernest@mail.ru",
+    "text": "My second record",
+    "CreatedDate": "2019-09-21T07:01:05.314Z",
+    "LastEditDate": "2019-09-21T06:55:34.446Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.book",
+  "pk": 3,
+  "fields": {
+    "author": "Michael",
+    "email": "michael@yahoo.com",
+    "text": "My third record\r\nMade some changes",
+    "CreatedDate": "2019-09-21T10:12:39.557Z",
+    "LastEditDate": "2019-09-21T10:55:47.767Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.book",
+  "pk": 5,
+  "fields": {
+    "author": "Alexandra",
+    "email": "alexandra@gmail.com",
+    "text": "My fifth record",
+    "CreatedDate": "2019-09-21T07:00:23.728Z",
+    "LastEditDate": "2019-09-21T06:58:16.365Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.book",
+  "pk": 8,
+  "fields": {
+    "author": "Ernest",
+    "email": "ernest@mail.ru",
+    "text": "This is my first record. Yeaahh",
+    "CreatedDate": "2019-09-21T12:34:46.256Z",
+    "LastEditDate": "2019-09-21T12:35:02.471Z",
+    "status": "active"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$yk6pLdUw32eh$flz5bOOWZANx68Idc0938YRqfLu/cqBXsIHMnz+Ayec=",
+    "last_login": "2019-09-21T06:31:03.001Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "lipatowevgeniy@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-09-21T05:42:43.768Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

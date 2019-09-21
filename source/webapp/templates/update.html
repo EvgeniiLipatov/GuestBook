@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Update Record{% endblock %}
+{% block title %}Редактирование{% endblock %}
 
 {% block content %}
 
-    <h1>Update Record</h1>
+    <h1>Редактирование записи</h1>
 
     <form method="POST" action="{% url "update_record" record.pk %}">
                  {% include 'partial/task_form.html' %}
-              <p><input type="submit" value="Submit"></p>
+    <p class="text-center"><input class="btn-primary" type="submit" value="Отправить"></p>
 
     </form>
 

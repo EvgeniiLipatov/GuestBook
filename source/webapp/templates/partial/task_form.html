@@ -1,3 +1,5 @@
+{% load widget_tweaks %}
+
 {% csrf_token %}
 
  {% for error in form.non_field_errors %}
@@ -9,6 +11,8 @@
 
 {% for field in form %}
 
+ <div class="container form-group w-50">
+
    <p><label for="{{ field.id_for_label }}">{{ field.label }}</label></p>
 
    {% for error in field.errors %}
@@ -17,6 +21,8 @@
 
    {% endfor %}
 
-   <p>{{ field }}</p>
+   <p>{{ field|add_class:"form-control" }}</p>
+
+ </div>
 
 {% endfor %}

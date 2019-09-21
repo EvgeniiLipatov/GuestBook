@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Add new record{% endblock %}
+{% block title %}Создание{% endblock %}
 
 {% block content %}
-    <h1>Create Record</h1>
-    <form method="POST" action="{% url 'create_record' %}">
+    <h1>Создать новую запись</h1>
+    <div class="text-center">
+    <form  method="POST" action="{% url 'create_record' %}">
         {% include 'partial/task_form.html' %}
-        <p><input type="submit" value="Submit"></p>
+        <p ><input class="btn-primary" type="submit" value="Создать"></p>
     </form>
+    <div>
 {% endblock %}

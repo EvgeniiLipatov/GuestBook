@@ -5,15 +5,15 @@
 
 {% block content %}
 
-    <h1>Are you sure want to delete record? "{{ record }}"?</h1>
+    <h1 class="for_delete">Are you sure want to the delete record? </h1>
 
     <form method="POST" action="{% url "delete_record" record.pk %}" class="text-center">
 
         {% csrf_token %}
 
-        <p><input type="submit" value="Confirm"></p>
+        <p><input class="btn btn-danger" type="submit" value="Да"></p>
 
-        <p><a href="{% url "index" %}">Cancel</a></p>
+        <p><a class="btn btn-primary" href="{% url "index" %}">Нет</a></p>
 
     </form>
 
