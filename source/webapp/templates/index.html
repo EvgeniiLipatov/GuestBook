@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for record in records %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ record.author }} ({{ record.email  }})</h5>
+    <p class="card-text">{{ record.text }}</p>
+    <a href="#" class="card-link">Edit</a>
+    <a href="#" class="card-link">Delete</a>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+
