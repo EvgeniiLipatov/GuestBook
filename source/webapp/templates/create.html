@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Add new record{% endblock %}
+
+{% block content %}
+    <h1>Create Record</h1>
+    <form method="POST" action="{% url 'create_record' %}">
+        {% include 'partial/task_form.html' %}
+        <p><input type="submit" value="Submit"></p>
+    </form>
+{% endblock %}
